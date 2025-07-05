@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
-# This script lists filenames in the current directory after the first dash
+# This script lists filenames in the current directory, cutting before the first dash if any
 
 for file in *; do
-  # Skip if not a file or doesn’t contain a dash
-  if [[ -f "$file" && "$file" == *-* ]]; then
+  # Skip hidden files
+  [[ "$file" == .* ]] && continue
+
+  # If file has a dash, show what's after the first dash
+  if [[ "$file" == *-* ]]; then
     echo "${file#*-}"
+  else
+    echo "$file"
   fi
 done
+
