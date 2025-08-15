@@ -1,4 +1,2 @@
-#!/usr/bin/env bash
-ps -u "$USER" -o pid=
-
-
+#!/bin/bash
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
