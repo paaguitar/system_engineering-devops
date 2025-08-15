@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # A Bash script that displays all running process IDs in a hierarchical format
 
-ps -eo pid --forest
+ps -e -o pid --forest
