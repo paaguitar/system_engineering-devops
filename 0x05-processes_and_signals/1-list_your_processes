@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Display the users of currently running processes
-ps -eo user
+# A Bash script that displays a list of all running processes in a user-oriented hierarchical format
+
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
