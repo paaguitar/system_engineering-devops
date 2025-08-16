@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-# Displays the PID along with the process name of bash processes
-ps -eo pid,args | grep '[b]ash' | grep '/bin/bash'
+ps -eo pid,cmd | grep bash
