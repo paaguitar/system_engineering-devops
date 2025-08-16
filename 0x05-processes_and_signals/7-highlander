@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-trap 'echo "OK"' SIGTERM
+trap 'printf "I am invincible!!!\n" > /dev/stdout' SIGTERM
 
 while true
 do
-  echo "To infinity and beyond"
-  sleep 2
+    echo "To infinity and beyond"
+    sleep 2
 done
