@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# A Bash script that displays a list of all running processes in a user-oriented hierarchical format
+# A Bash script that displays a list of all running processes with header STARTED and full timestamp
 
-ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,lstart,time,command --forest | \
+awk 'NR==1 {gsub("START","STARTED")} {print}'
