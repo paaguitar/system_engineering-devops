@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # Display the users of currently running processes
-
 ps -eo user
