@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# Script that displays the PID and process name of all processes containing "bash"
-
-pgrep -a bash
+# Displays the PID along with the process name of bash processes
+ps -eo pid,cmd | grep '[b]ash' | grep '/bin/bash'
