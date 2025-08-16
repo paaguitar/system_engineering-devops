@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # A Bash script that displays "To infinity and beyond" indefinitely and says "I am invincible!!!" on SIGTERM
 
-trap 'echo "I am invincible!!!"' SIGTERM
+trap "echo 'I am invincible!!!'" SIGTERM
 
 while true
 do
